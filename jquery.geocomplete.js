@@ -217,7 +217,7 @@
       // Assume that if user types anything after having selected a result,
       // the selected location is not valid any more.
       if (this.options.geocodeAfterResult === true){
-        this.$input.bind('keypress.' + this._name, $.proxy(function(){
+        this.$input.bind('keypress.' + this._name, $.proxy(function(event){
           if (event.keyCode != 9 && this.selected === true){
               this.selected = false;
           }
